@@ -31,7 +31,7 @@ class NewsViewModel: ObservableObject {
     @Published var articles = [Article]()
 
     func fetchNews() {
-        let urlString = "https://newsapi.org/v2/everything?q=apple&from=2024-04-18&to=2024-04-18&sortBy=popularity&apiKey=e710c1c7fef44ee59d1af8f740e73002"
+        let urlString = "https://newsapi.org/v2/everything?q=apple&from=2024-04-18&to=2024-04-18&sortBy=popularity&apiKey=YourAPIKey"
         guard let url = URL(string: urlString) else { return }
 
         URLSession.shared.dataTask(with: url) { data, response, error in
